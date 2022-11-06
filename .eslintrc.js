@@ -33,7 +33,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['**/electron/**.[jt]s'],
+      files: ['**/electron/**.[jt]s', 'scripts/*.js'],
       rules: {
         '@typescript-eslint/no-var-requires': 'off',
       },
