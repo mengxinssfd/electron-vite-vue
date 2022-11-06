@@ -8,9 +8,13 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build && electron-builder",
+    "build": "npm run ts-check:* && vite build && electron-builder",
+    "build:mac": "npm run ts-check:* && vite build && electron-builder --mac",
+    "build:win": "npm run ts-check:* && vite build && electron-builder --win",
     "lint": "eslint .",
-    "ts-check": "vue-tsc --noEmit && vue-tsc --noEmit -p ./tsconfig.node.json"
+    "ts-check:src": "vue-tsc --noEmit",
+    "ts-check:electron": "vue-tsc --noEmit -p ./tsconfig.node.json",
+    "ts-check:*": "run-p ts-check:src ts-check:electron"
   },
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
@@ -25,6 +29,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.7.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.7.1",
     "typescript": "^4.8.4",
     "vite": "^3.2.2",
