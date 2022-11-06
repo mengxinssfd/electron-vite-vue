@@ -1,5 +1,9 @@
 # electron-vite-vue
 
+
+`fork`: 在原基础上添加 eslint prettier commit-lint 更严格的 ts 类型检查，scripts 等
+
+
 🥳 Really simple `Electron` + `Vue` + `Vite` boilerplate.
 
 [![awesome-vite](https://awesome.re/mentioned-badge.svg)](https://github.com/vitejs/awesome-vite)
