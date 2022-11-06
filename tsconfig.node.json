@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "target": "ESNext",
     "composite": true,
@@ -8,5 +9,5 @@
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true
   },
-  "include": ["package.json", "electron"]
+  "include": ["package.json", "electron/*/*.ts"]
 }

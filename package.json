@@ -9,7 +9,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build && electron-builder",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "ts-check": "vue-tsc --noEmit && vue-tsc --noEmit -p ./tsconfig.node.json"
   },
   "engines": {
     "node": "^14.18.0 || >=16.0.0"
